@@ -1,296 +1,419 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My First Bitstarter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
-          rel="stylesheet" type="text/css">
-    <style type="text/css">
+<head>
+<meta charset="utf-8">
 
-      /* Large desktop */
-      @media (min-width: 980px) { 
-        body {
-         padding-top: 60px;
-        }
-       .linediv-l {
-         border-right: 1px white solid;
-        }
-       .linediv-r {
-         border-left: 1px white solid;
-       }
-      }
+<!--Page Title-->
+<title>Off the Shelf - eBook Landing Page</title>
 
-      /* Landscape phones and down */
-      @media (max-width: 480px) { 
-       .copy {
-         padding: 2.5% 10%;
-       }
-       .linediv-l {
-         border-bottom: 1px white solid;
-       }
-       .linediv-r {
-         border-top: 1px white solid;
-       }
-      }
+<!--Device Width Check-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
-      /* All form factors */
+<!--Meta Keywords and Description-->
+<meta name="keywords" content="">
+<meta name="description" content="">
 
-      /* Main body and headings */
-      body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        text-align: center;
-      }
-      p.lead {
-        padding-top: 1.5%;
-        font-size: 24px;
-        line-height: 30px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 24px;
-      }
+<!--Favicon-->
+<link rel="shortcut icon" href="images/favicon.ico" title="Favicon" />
 
-      /* Video pitch and Action */
-      .pitch {
-        padding: 2.5% 0%;
-      }
-      .order {
-        padding: 2% 0%;
-      }
-      .actions {
-        background-color: #343434;
-        padding: 3% 0%;
-      }
-      .video, .thermometer, .order, .social, .statistics {
-        text-align: center;
-      }
-      .statistics h3, .statistics p {
-        color: white;
-      }
+<!--Fixes for Internet Explorer CSS3 and HTML5-->
+<!--[if gte IE 9]>
+<style type="text/css">
+	.gradient { filter: none!important;}
+</style>
+<![endif]-->
 
-      /* Marketing Copy and Footer */
-      .copy {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        text-align: justify;
-      }
-      .asset {
-        padding: 2.5% 0%;
-      }
-      .footer {
-        color: #cccccc;
-        text-align: center;
-      }
-      .footer p {
-        font-size: 11px;
-      }
-      .footer a {
-        color: #ccccff;
-      }
-    </style>
-  </head>
-  <body>
+<!--[if lt IE 9]>
+<script>
+  'article aside footer header nav section time'.replace(/\w+/g,function(n){document.createElement(n)})
+</script>
+<![endif]-->
 
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar"
-                  data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Bitstarter</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+<!--Main CSS-->
+<link rel="stylesheet" href="css/style.css" media="screen, projection">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="css/style_ie8.css" media="screen, projection">
+<![endif]-->
+
+<!--Icon Fonts-->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+<![endif]-->
+
+<!--Google Webfonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600|Bree+Serif' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<!--Start of Product Banner-->
+<section id="banner" role="banner">
+<div class="row">
+<div id="header_region">
+<!--Start of Header Logo-->
+<div id="logo" class="two_thirds">
+<hgroup>
+<h1><img src="images/logo.png" alt="Off the Shelf eBook Landing Page" title="Off the Shelf eBook Landing Page" height="41" width="41"/>Launch Rails</h1>
+<h2>Starter SaaS App and eBook</h2>
+</hgroup>
+</div>
+<!--End of Header Logo-->
+
+<!--Start of Social Elements-->
+<aside id="social_elements" class="one_third last">
+<ul>
+<li><a class="twitter" target="_blank" title="Twitter" href="http://twitter.com/launchrailsbook"><span>Twitter</span></a></li>
+<li><a class="facebook" target="_blank" title="Facebook" href=""><span>Facebook</span></a></li>
+<li><a class="googleplus" target="_blank" title="Google Plus" href=""><span>Google Plus</span></a></li>
+<li><a class="feedback" target="_blank" title="Feedback Form" href=""><span>Feedback Form</span></a></li>
+</ul>
+</aside>
+<!--End of Social Elements-->
+</div>
+<!--Start of Product Image-->
+<div id="shelf" class="one_half">
+<img src="images/book-w-binder.png" height="451" width="331" alt="Book"/></div>
+<!--End of Product Image-->
+
+<!--Start of Product Banner Description-->
+<div class="one_half last">
+<!--Start of Banner Title-->
+<hgroup>
+<h1>You can go from idea to launch in 1 week!</h1>
+<h2 class="subheader">LaunchRails provides working open source code for a monthly subscription SaaS product as well as an ebook that guides you step-by-step through the process. </h2>
+</hgroup>
+<!--End of Banner Title-->
+
+<p>LaunchRails supporters on BitStarter will be able to pick new features and content and will receive email support for the project. </p>
+
+<!--Start of Buy Button-->
+<div class="button_buy">
+<a href="#" class="gradient" title="Buy eBook"><span class="button_price">$39</span> <span class="button_text">Preorder Bundle</span></a>
+<p class="hint">eBook is DRM-free and includes PDF, ePub and Kindle versions. </p>
+</div>
+<!--End of Buy Button-->
+
+</div>
+<!--End of Product Banner Description-->
+
+</div>
+</section>
+<!--End of Product Banner-->
+
+<!--Start of Main Content-->
+<article role="main">
+<div id="main_content">
+
+
+
+<!--Start of Features-->
+<section id="features">
+<div class="row">
+
+<!--Start of Features Title-->
+<h2 class="section_title"><span>What you will learn with this eBook</span></h2>
+<!--End of Features Title-->
+
+<!--Start of Features List-->
+<ul>
+<li class="one_half"><i class="icon-cogs icon-4x"></i>
+<h4>Planning Steps You Can Start Today</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p></li>
+<li class="one_half last"><i class="icon-tablet icon-4x"></i>
+<h4>Setting Up Your Development Environment</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p></li>
+<li class="one_half"><i class="icon-beaker icon-4x"></i>
+<h4>Design Secrets to Save Time and Money</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p></li>
+<li class="one_half last"><i class="icon-dashboard icon-4x"></i>
+<h4>A Complete Guide to Your Starter SaaS App</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p></li>
+<li class="one_half"><i class="icon-tint icon-4x"></i>
+<h4>How to Deploy Your Application to the Cloud</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p></li>
+<li class="one_half last"><i class="icon-magic icon-4x"></i>
+<h4>Start Generating Revenue and Grow</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p></li>
+</ul>
+<!--End of Features List-->
+</div>
+</section>
+<!--End of Features-->
+
+
+
+
+
+<!--Start of Screenshots-->
+<section id="screenshots" class="background_white">
+<div class="row">
+
+<div class="one_half">
+
+<!--Start of Screenshots Title-->
+<hgroup>
+<h2>Take a sneak peak inside</h2>
+<h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempam et justo duo dolores et ea rebum.</h3>
+</hgroup>
+<!--End of Screenshots Title-->
+
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+
+<!--Start of Check List-->
+<ul class="list_check">
+<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</li>
+<li>At vero eos et accusam et justo duo dolores et ea rebum.</li>
+<li>Ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+</ul>
+<!--End of Check List-->
+
+</div>
+
+<div class="one_half last">
+
+<!--Start of Screenshot Images-->
+<div class="image-gallery">
+    <a class="zoom-cursor" href="images/screenshots/1.jpg" title="What's That Click? 1"><img src="images/screenshots/thb_1.jpg" width="220" height="140" alt="Screenshot 1" /></a>
+    <a class="zoom-cursor last" href="images/screenshots/2.jpg" title="What's That Click? 2"><img src="images/screenshots/thb_2.jpg" width="220" height="140" alt="Screenshot 2" /></a>
+    <a class="zoom-cursor" href="images/screenshots/3.jpg" title="What's That Click? 3"><img src="images/screenshots/thb_3.jpg" width="220" height="140" alt="Screenshot 3" /></a>
+    <a class="zoom-cursor last" href="images/screenshots/4.jpg" title="What's That Click? 4"><img src="images/screenshots/thb_4.jpg" width="220" height="140" alt="Screenshot 4" /></a>
+</div>
+<!--End of Screenshot Images-->
+
+</div>
+</div>
+</section>
+<!--End of Screenshots-->
+
+
+<section class="background_white">
+<div class="row">
+
+<div class="one_half">
+<img src="images/device_dummy.jpg" alt="eBook Landing Page" height="352" width="350" />
+</div>
+
+<!--Start How it Works-->
+<div class="one_half last">
+
+<hgroup>
+<h2>Read it on your favorite device!</h2>
+<h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempam et justo duo dolores et ea rebum.</h3>
+</hgroup>
+
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+
+<p>Stet clita kasd gubergren, no sea takimata sanctus et ea rebum.</p>
+
+</div>
+<!--End of How it Works-->
+</div>
+</section>
+
+
+<!--Start of Pricing-->
+<section id="pricing" class="background_grey">
+<div class="row">
+
+<h2 class="section_title"><span>We have some special bundles for you</span></h2>
+
+<div id="pricing_table">
+
+<!--Beginn Pricing Block-->
+<div class="pricing_block one_fourth">
+<div class="pricing_header">
+<h4>Supporter</h4>
+</div>
+<div class="pricing">
+<p class="price"><span>$</span>39</p>
+<p class="price_sub">The standard edition</p>
+</div>
+<ul>
+<li>Complete Book</li>
+<li>Bonus Content</li>
+<li>Access to Downloads</li>
+<li>Reduced Price</li>
+<li class="last">Additional Book</li>
+</ul>
+<a href="#" class="button_buy_table gradient">Preorder now</a>
+</div>
+<!--End Pricing Block-->
+
+<!--Beginn Pricing Block-->
+<div class="pricing_block one_fourth">
+<div class="pricing_header">
+<h4>Angel</h4>
+</div>
+<div class="pricing">
+<p class="price"><span>$</span>59</p>
+<p class="price_sub">The standard edition</p>
+</div>
+<ul>
+<li>Complete Book</li>
+<li>Bonus Content</li>
+<li>Access to Downloads</li>
+<li>Reduced Price</li>
+<li class="last">Additional Book</li>
+</ul>
+<a href="#" class="button_buy_table gradient">Preorder now</a>
+</div>
+<!--End Pricing Block-->
+
+<!--Beginn Pricing Block-->
+<div id="favorite" class="pricing_block one_fourth">
+<div class="pricing_header">
+<h4>VC</h4>
+</div>
+<div class="pricing">
+<p class="price"><span>$</span>79</p>
+<p class="price_sub">The standard edition</p>
+</div>
+<ul>
+<li>Complete Book</li>
+<li>Bonus Content</li>
+<li>Access to Downloads</li>
+<li>Reduced Price</li>
+<li class="last">Additional Book</li>
+</ul>
+<a href="#" class="button_buy_table gradient">Preorder now</a>
+</div>
+<!--End Pricing Block-->
+
+<!--Beginn Pricing Block-->
+<div class="pricing_block one_fourth last">
+<div class="pricing_header">
+<h4>CoFounder</h4>
+</div>
+<div class="pricing">
+<p class="price"><span>$</span>99</p>
+<p class="price_sub">The standard edition</p>
+</div>
+<ul>
+<li>Complete Book</li>
+<li>Bonus Content</li>
+<li>Access to Downloads</li>
+<li>Reduced Price</li>
+<li class="last">Additional Book</li>
+</ul>
+<a href="#" class="button_buy_table gradient">Preorder now</a>
+</div>
+<!--End Pricing Block-->
+
+</div><!--End of Pricing Table-->
+
+</div>
+</section>
+<!--End of Pricing-->
+
+
+
+
+<!--Start of A Word from the Author-->
+<section id="author" class="background_white">
+<div class="row">
+<div class="one_half">
+
+<!--Author Avatar-->
+<img src="images/aaron.jpg" height="100" width="100" id="author_image" class="left" alt="Author" />
+<!--End of Author Avatar-->
+
+<div class="one_third last">
+
+<h2>A word from the Author</h2>
+
+<p>I spent the last three years learning a lot. Using lean principles, I've launched 3 successful products from idea to release in 90 days. I'd like to share with you what I've learned along the way.</p>
+
+<p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+
+<p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+</div>
+</div>
+
+<div id="book_cover" class="one_half last">
+
+<!--Start of Book Cover-->
+<img src="images/book_dummy_content.jpg" alt="eBook Landing Page" height="370" width="320"/>
+<!--End of Book Cover-->
+
+</div>
+
+<!--Start of Buy Button-->
+<div class="button_buy">
+<a href="#" class="gradient" title="Buy eBook"><span class="button_price">$39</span> <span class="button_text">Preorder eBook</span></a>
+<p class="hint">eBook is DRM-free and includes PDF, ePub and Kindle versions</p>
+</div>
+<!--End of Buy Button-->
+
+</div>
+</section>
+<!--End of A Word from the Author-->
+
+
+
+<aside class="background_grey">
+
+<!--Start of Newsletter-->
+<div id="newsletter" class="row">
+
+<h2>For a free Chapter, join our Newsletter!</h2>
+
+<form>
+<input type="text" name="e-mail" id="e-mail" value="Enter your E-mail Address" onBlur="if(this.value == '') { this.value = 'Enter your E-mail Address'; }" onFocus="if(this.value == 'Enter your E-mail Address') { this.value = ''; }" /> 
+<input id="submit" class="gradient" type="submit" value="Subscribe" name="submit" />
+</form>
+</div>
+<!--End of Newsletter-->
+
+</aside>
+
+
+
+
+</div>
+</article>
+<!--End of Main Content-->
+
+<!--Start of Landing Page Footer-->
+<footer role="contentinfo">
+<div id="page_footer" class="row">
+<ul>
+<li><a href="about.html">About</a></li>
+<li><a href="#">Press</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+<p>
+&copy; LaunchRails Bitstarter 2013. All rights reserved.
+</p>
+</div>
+</footer>
+<!--End of Landing Page Footer-->
+
+<!--Beginning of Contact form-->
+<div id="contact" class="reveal-modal medium">
+    <a href="javascript:closecontact();" id="contact_close"><span>Close</span></a>
+    <div id="contactmessages"></div>
+    <div id="formwrapper">
+        <form method="post" action="contact.php" id="contactform">
+            <label>Your Name</label>
+            <input id="contactname" name="name" required>
+            <label>Your Email</label>
+            <input id="contactemail" name="email" type="email" required>
+            <label>Your Message</label>
+            <textarea name="message" required></textarea>
+            <label>What is <span id="captcha">???</span> (Anti-spam)</label>
+            <input id="humanornot" name="humanornot" placeholder="Type Here" required>
+            <input name="s" id="s" value="blank" type="hidden">
+            <input id="submitcontact" name="submit" type="submit" value="Submit" class="gradient">
+        </form>
     </div>
+</div>
+<!--End of Contact form-->
 
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
-    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-    <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="container">
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
-          <h1>Product</h1>
-        </div>
-      </div> 
-      <div class="row-fluid subheading">
-        <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
-          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
-        </div>
-      </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions">
-          <div class="span8 offset2">
-            <div class="statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
-            </div>
-          </div>
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
-          </div>
-          <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Beyond this part the marketing copy begins. -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
-      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
-      <!-- http://placehold.it -->
-      <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-        <div class="span5 copy">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
-        </div>
-      </div>
-
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
-        </div>
-        <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-      </div>
-
-      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
-      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
-      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
-      <div class="row-fluid faq">
-          <div class="span10 offset1">
-            <h3>FAQ</h3>
-            <div class="accordion" id="accordion2">
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseOne">
-                    What does FAQ stand for?
-                  </a>
-                </div>
-                <div id="collapseOne" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    Frequently Asked Question.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseTwo">
-                    What's a Frequently Asked Question?
-                  </a>
-                </div>
-                <div id="collapseTwo" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    A question which is commonly asked by users.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-      </div>
-
-      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
-      <!-- http://creativecommons.org/licenses/ -->
-      <div class="row-fluid footer">
-        <div class="span12">
-          <p>This work is licensed under
-            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
-              By-SA 3.0
-            </a>, without all the cruft that would otherwise be
-            put at the bottom of the page.</p>
-        </div>
-      </div>
-    </div>
-  </body>
+<a href="#" class="scrollup">Scroll up</a>
+<!-- Included JS Files (Compressed) -->
+<script src="js/foundation.min.js"></script>
+<script src="js/phrases.js"></script>
+<script src="js/site.min.js"></script>
+</body>
 </html>
-
